@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa IBGE</title>
+</head>
+<body>
+    <h1>Pesquisa de Nascionalidade</h1>
+    Nacionalidade: <input type="text" name="txtnac" id="txtnac" placeholder="Digite sua Nacionalidade">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id = "res">
+
+    </div>
+    <script>
+        function calcular(){
+            var txtnac = window.document.getElementById('txtnac')
+            var nac = String(txtnac.value)
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p> Sua nacionalidade é <strong>${nac}</strong></p>`
+
+            if (nac == 'Brasil'){
+                console.log('Você é Brasileiro')
+                res.innerHTML += `<p> Você é <strong>BRASILEIRO</strong></p>`
+            }else{
+                console.log('Você é estrangeiro')
+                res.innerHTML += `<p> Você é <strong>ESTRANGEIRO</strong></p>`
+
+            }
+            } 
+        
+    </script>
+</body>
+</html>
